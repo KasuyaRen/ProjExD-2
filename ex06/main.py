@@ -41,7 +41,7 @@ class Shot:#スペースを押したら
 def main():
 
     scr = Screen("刹那test", (700, 600), "fig/yuyake.png")
-    fight = img("fig/fight.png", 0.9, (350, 300))
+    fight = img("fig/fight.png", 0.9, (270, 300))
     tori = img("fig/9.png", 2.0, (550, 450))
     blue_tori = img("fig/bluebird.png", 0.2, (170, 450))
     kanban = img("fig/kanban.png", 0.5, (10,0))
@@ -59,7 +59,7 @@ def main():
             if cong_time == 0:
                 cong_time = pg.time.get_ticks() # びっくりの瞬間を保存
             fight.blit(scr)#びっくりを表示
-            CPU = cong_time + randint(270,300) # CPU設定
+            CPU = cong_time + randint(1000,3000) # CPU設定
             flag = 1 #フラグ1にする
             if pg.time.get_ticks() >= CPU:
                 push_time = pg.time.get_ticks()
